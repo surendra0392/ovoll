@@ -1,0 +1,22 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="cutout-right">
+      <rect width="400" height="400" fill="white" />
+      <circle cx="160" cy="200" r="160" fill="black" />
+    </mask>
+    <mask id="cutout-left">
+      <rect width="400" height="400" fill="white" />
+      <circle cx="240" cy="200" r="180" fill="black" />
+    </mask>
+    <linearGradient id="grad-left" x1="0" y1="0" x2="0" y2="400">
+      <stop offset="0%" stop-color="#00D1FF" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Right Crescent (Back) -->
+  <circle cx="220" cy="200" r="160" fill="#14B8A6" mask="url(#cutout-right)" />
+  
+  <!-- Left Crescent (Front) -->
+  <circle cx="180" cy="200" r="180" fill="url(#grad-left)" mask="url(#cutout-left)" />
+</svg>

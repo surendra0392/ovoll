@@ -1,0 +1,38 @@
+# Standard Crawlers
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /dev/
+Disallow: /api/
+Disallow: /contact/success
+
+# Generative Engine Optimization (GEO) & AI Crawlers
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+Disallow: /dev/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin/
+Disallow: /dev/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+Disallow: /dev/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin/
+Disallow: /dev/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /admin/
+Disallow: /dev/
+
+# Sitemap Location
+Sitemap: https://ovoll.in/sitemap.xml
+Sitemap: https://ovoll.test/sitemap.xml
+

@@ -1,0 +1,795 @@
+@import 'tailwindcss';
+@import '@fontsource/geist-sans';
+@import '@fontsource/geist-mono';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../js';
+
+@theme {
+    --font-sans: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Geist Sans', sans-serif;
+    --font-geist: 'Geist Sans', sans-serif;
+    --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    /* Breakpoints */
+    --breakpoint-xs: 480px;
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+
+    /* Spacing Scale */
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-8: 32px;
+    --spacing-10: 40px;
+    --spacing-12: 48px;
+    --spacing-16: 64px;
+    --spacing-20: 80px;
+    --spacing-24: 96px;
+    --spacing-30: 120px;
+
+    /* Radii */
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    --radius-3xl: 32px;
+    --radius-full: 9999px;
+
+    /* ═══════════════════════════════════════
+       OVOLL Brand Color System
+       Primary:  #081320 (Deep Space)
+       White:    #FFFFFF
+       Teal:     #14B8A6 (Brand Accent)
+       Cyan:     #00D1FF (Electric Highlight)
+       ═══════════════════════════════════════ */
+
+    /* Semantic mappings — consumed by Tailwind utilities */
+    --color-background: var(--bg-primary);
+    --color-foreground: var(--text-primary);
+
+    --color-primary: var(--brand-primary);
+    --color-primary-foreground: var(--brand-primary-foreground);
+
+    --color-secondary: var(--bg-secondary);
+    --color-secondary-foreground: var(--text-secondary);
+
+    --color-accent: var(--brand-accent);
+    --color-accent-foreground: var(--brand-accent-foreground);
+
+    --color-muted: var(--bg-muted);
+    --color-muted-foreground: var(--text-muted);
+
+    --color-border: var(--border-color);
+    --color-input: var(--border-color);
+    --color-ring: var(--ring-color);
+
+    /* Semantic Status Colors */
+    --color-success: #10b981;
+    --color-success-foreground: #ffffff;
+    --color-warning: #f59e0b;
+    --color-warning-foreground: #ffffff;
+    --color-danger: #ef4444;
+    --color-danger-foreground: #ffffff;
+    --color-info: #00d1ff;
+    --color-info-foreground: var(--color-surface-raised);
+
+    /* Surface Ramp — one deliberate elevation scale so section rhythm reads as
+       a single system. Darkest (furthest back) to lightest (closest to view):
+         base         — page/app backdrop, splash, backdrops
+         section      — full-bleed section backgrounds (hero, CTA)
+         section-alt  — alternating sections, marquee bands, floating chips
+         raised       — footer, overlays, tooltips, controls + deep-navy ink on bright
+         card         — card surfaces resting above sections, hover lifts */
+    --color-surface-base: #030712;
+    --color-surface-section: #050b14;
+    --color-surface-section-alt: #070f1e;
+    --color-surface-raised: #081320;
+    --color-surface-card: #0b172a;
+
+    /* Z-Index Scale */
+    --z-index-base: 0;
+    --z-index-nav: 50;
+    --z-index-dropdown: 100;
+    --z-index-modal: 200;
+    --z-index-toast: 300;
+    --z-index-grain: 400;
+
+    /* Blurs */
+    --blur-xs: 2px;
+    --blur-sm: 4px;
+    --blur-md: 8px;
+    --blur-lg: 12px;
+    --blur-xl: 16px;
+    --blur-2xl: 24px;
+    --blur-3xl: 32px;
+
+    /* Premium Motion */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@layer base {
+    :root {
+        /* ── Light Mode ── */
+        --bg-primary: #ffffff;
+        --bg-secondary: #f0fdfa;
+        --bg-muted: #f0fdfa;
+
+        --text-primary: #081320;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+
+        --brand-primary: #081320;
+        --brand-primary-foreground: #ffffff;
+
+        --brand-accent: #14b8a6;
+        --brand-accent-foreground: #081320;
+
+        --brand-cyan: #00d1ff;
+
+        --border-color: #e2e8f0;
+        --ring-color: #14b8a6;
+
+        --glass-bg: rgba(255, 255, 255, 0.7);
+        --glass-border: rgba(20, 184, 166, 0.15);
+
+        --gradient-brand: linear-gradient(135deg, #14b8a6, #00d1ff);
+        --gradient-glow: radial-gradient(
+            circle at 50% 50%,
+            rgba(20, 184, 166, 0.15),
+            transparent 70%
+        );
+        --gradient-surface: linear-gradient(180deg, #ffffff, #f0fdfa);
+    }
+
+    .dark {
+        /* ── Dark Mode — OVOLL Premium Deep Space ── */
+        --bg-primary: #030712;
+        --bg-secondary: #080f1e;
+        --bg-muted: #0f172a;
+
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-muted: #64748b;
+
+        --brand-primary: #f8fafc;
+        --brand-primary-foreground: #030712;
+
+        --brand-accent: #2ec4a5;
+        --brand-accent-foreground: #030712;
+
+        --brand-cyan: #00d1ff;
+
+        --border-color: rgba(46, 196, 165, 0.1);
+        --ring-color: #2ec4a5;
+
+        --glass-bg: rgba(3, 7, 18, 0.7);
+        --glass-border: rgba(46, 196, 165, 0.12);
+
+        --gradient-brand: linear-gradient(135deg, #2ec4a5, #00d1ff);
+        --gradient-glow: radial-gradient(
+            circle at 50% 50%,
+            rgba(46, 196, 165, 0.08),
+            transparent 70%
+        );
+        --gradient-surface: linear-gradient(180deg, #030712, #080f1e);
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    /* Dark-by-default shell: kills the white flash between first paint and CSS/JS */
+    html {
+        background-color: var(--bg-primary);
+        /* Smooth anchor / scroll-driven navigation */
+        scroll-behavior: smooth;
+    }
+    /* Physical press feedback on interactive elements */
+    button:active:not(:disabled) {
+        transform: scale(0.97);
+        transition-duration: 60ms;
+    }
+    body {
+        @apply bg-background text-foreground antialiased;
+        selection {
+            background: rgba(20, 184, 166, 0.2);
+            color: #081320;
+        }
+    }
+    ::selection {
+        background: rgba(20, 184, 166, 0.2);
+        color: var(--text-primary);
+    }
+
+    /* ── WCAG 2.4.7 Focus Visible — keyboard focus indicators ── */
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    summary:focus-visible,
+    [tabindex]:not([tabindex='-1']):focus-visible,
+    [role='button']:focus-visible,
+    [role='tab']:focus-visible,
+    [role='menuitem']:focus-visible,
+    [role='switch']:focus-visible {
+        outline: 2px solid var(--brand-accent, #2ec4a5) !important;
+        outline-offset: 2px;
+    }
+}
+
+/* ═══════════════════════════════════════
+   OVOLL Utility Classes
+   ═══════════════════════════════════════ */
+@layer utilities {
+    /* OVOLL Typography System Tokens */
+    .typo-display-xl {
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: clamp(2.5rem, 5vw + 1rem, 5.5rem);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        text-wrap: balance;
+    }
+
+    .typo-display-l {
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: clamp(2rem, 4vw + 0.8rem, 4rem);
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        text-wrap: balance;
+    }
+
+    .typo-heading-xl {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: clamp(1.75rem, 3vw + 0.6rem, 3rem);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+    }
+
+    .typo-heading-l {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: clamp(1.5rem, 2vw + 0.5rem, 2.25rem);
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+    }
+
+    .typo-heading-m {
+        font-family: var(--font-geist);
+        font-weight: 600;
+        font-size: clamp(1.25rem, 1.5vw + 0.4rem, 1.75rem);
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+        text-wrap: balance;
+    }
+
+    .typo-heading-s {
+        font-family: var(--font-geist);
+        font-weight: 600;
+        font-size: clamp(1.125rem, 1vw + 0.3rem, 1.375rem);
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+        text-wrap: balance;
+    }
+
+    .typo-body-large {
+        font-family: var(--font-sans);
+        font-weight: 400;
+        font-size: clamp(1.05rem, 0.5vw + 0.8rem, 1.25rem);
+        line-height: 1.6;
+        letter-spacing: -0.005em;
+    }
+
+    .typo-body {
+        font-family: var(--font-sans);
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.6;
+        letter-spacing: 0em;
+    }
+
+    .typo-body-small {
+        font-family: var(--font-sans);
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        letter-spacing: 0.005em;
+    }
+
+    .typo-caption {
+        font-family: var(--font-geist);
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1.4;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    .typo-label {
+        font-family: var(--font-geist);
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+    }
+
+    .typo-button {
+        font-family: var(--font-geist);
+        font-weight: 700;
+        font-size: 0.875rem;
+        line-height: 1;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    /* Glass Morphism — OVOLL Deep Space variant */
+    .glass {
+        @apply shadow-sm backdrop-blur-xl;
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+    }
+
+    /* Brand gradient text */
+    .text-gradient,
+    .text-gradient span {
+        background: var(--gradient-brand);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* Brand gradient background */
+    .bg-gradient-brand {
+        background: var(--gradient-brand);
+    }
+
+    /* Subtle film grain over the whole site — breaks up flat digital surfaces.
+       Static SVG turbulence (data-URI), so it costs nothing at runtime. */
+    .bg-grain {
+        position: fixed;
+        inset: 0;
+        z-index: var(--z-index-grain);
+        pointer-events: none;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* Brand accent gradients (accents only) — teal, cyan, indigo, violet.
+       Registered globally so cards, chips, and bars can reuse them directly. */
+    .bg-gradient-accent-teal {
+        background: linear-gradient(135deg, #2ec4a5, #14b8a6);
+    }
+    .bg-gradient-accent-cyan {
+        background: linear-gradient(135deg, #00d1ff, #0ea5e9);
+    }
+    .bg-gradient-accent-indigo {
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    }
+    .bg-gradient-accent-violet {
+        background: linear-gradient(135deg, #a855f7, #ec4899);
+    }
+
+    /* Ambient glow behind elements */
+    .glow-brand {
+        box-shadow:
+            0 0 20px rgba(20, 184, 166, 0.15),
+            0 0 60px rgba(0, 209, 255, 0.08);
+    }
+
+    /* Subtle border glow on hover */
+    .border-glow {
+        border-color: rgba(20, 184, 166, 0.2);
+        transition:
+            border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+            box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .border-glow:hover {
+        border-color: rgba(20, 184, 166, 0.4);
+        box-shadow: 0 0 20px rgba(20, 184, 166, 0.1);
+    }
+
+    /* OVOLL Specific Premium Glass */
+    .ovoll-glass {
+        @apply shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[12px];
+        background: rgba(8, 19, 32, 0.4);
+        border: 1px solid rgba(20, 184, 166, 0.15);
+    }
+
+    .font-display {
+        font-family: var(--font-display);
+    }
+
+    .font-geist {
+        font-family: var(--font-geist);
+    }
+
+    /* Swiss Layout & Grid System Classes */
+    .container-editorial {
+        @apply mx-auto w-full max-w-[1400px] px-8 md:px-16 lg:px-24;
+    }
+
+    .section-padding {
+        @apply py-32 md:py-48 lg:py-60;
+    }
+
+    .card-editorial {
+        @apply flex h-full flex-col justify-between rounded-none border-t border-white/10 bg-transparent pt-8 pb-12 transition-all duration-500 ease-[var(--ease-out)] hover:border-white/30;
+    }
+
+    .reading-width {
+        max-width: 65ch;
+    }
+
+    /* OVOLL Standardized Motion */
+    .ovoll-transition {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+        transition-duration: 300ms;
+    }
+
+    /* Premium Text Glow Animation */
+    .animate-glow-breathe {
+        animation: glowBreathe 4s ease-in-out infinite;
+    }
+
+    /* Shimmering Metallic Reflective Text Gradient */
+    .text-shimmer {
+        background: linear-gradient(
+            to right,
+            #2ec4a5 0%,
+            #00d1ff 30%,
+            #ffffff 50%,
+            #00d1ff 70%,
+            #2ec4a5 100%
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmerSweep 4s linear infinite;
+    }
+
+    /* OVOLL Visual Identity Design Tokens */
+
+    /* Iconography Standardization Wrapper */
+    button svg,
+    a svg,
+    span svg,
+    .ovoll-icon {
+        stroke-width: 1.5 !important;
+        transition: all 300ms var(--ease-out);
+    }
+
+    /* Technical Drawing Corner Ticks */
+    .ovoll-corner-accent {
+        position: relative;
+    }
+    .ovoll-corner-accent::before,
+    .ovoll-corner-accent::after {
+        content: '+';
+        position: absolute;
+        font-family: var(--font-mono);
+        font-size: 9px;
+        color: rgba(46, 196, 165, 0.25);
+        pointer-events: none;
+    }
+    .ovoll-corner-accent::before {
+        top: -6px;
+        left: -4px;
+    }
+    .ovoll-corner-accent::after {
+        bottom: -7px;
+        right: -4px;
+    }
+
+    /* Precision Dividers */
+    .ovoll-divider-precise {
+        height: 1px;
+        background: linear-gradient(
+            to right,
+            rgba(46, 196, 165, 0.15) 0%,
+            rgba(46, 196, 165, 0.02) 100%
+        );
+        width: 100%;
+        position: relative;
+    }
+    .ovoll-divider-precise::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #2ec4a5;
+    }
+
+    /* Refined Underline Link Hover Transition */
+    .ovoll-link-hover {
+        position: relative;
+        text-decoration: none;
+        transition: color 260ms var(--ease-out);
+    }
+    .ovoll-link-hover::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: #00d1ff;
+        transform-origin: bottom right;
+        transition: transform 300ms var(--ease-out);
+    }
+    .ovoll-link-hover:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+@keyframes glowBreathe {
+    0%,
+    100% {
+        filter: drop-shadow(0 0 10px rgba(0, 209, 255, 0.2))
+            drop-shadow(0 0 2px rgba(20, 184, 166, 0.2));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px rgba(0, 209, 255, 0.5))
+            drop-shadow(0 0 6px rgba(20, 184, 166, 0.4));
+    }
+}
+
+@keyframes shimmerSweep {
+    0% {
+        background-position: 200% center;
+    }
+    100% {
+        background-position: -200% center;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Track holds 3 copies of the item list; shift by one third for a seamless loop. */
+        transform: translateX(-33.333%);
+    }
+}
+
+/* First-paint splash (app.blade.php): a light band travelling along the track.
+   Band width is one third of the track, so -120% to 320% sweeps fully across. */
+@keyframes splash-travel {
+    0% {
+        transform: translateX(-120%);
+    }
+    100% {
+        transform: translateX(320%);
+    }
+}
+
+@keyframes splash-fade-out {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* No-JS safety net: if React never mounts (and so never removes #splash),
+   ease the splash away instead of leaving it covering the page. */
+#splash {
+    animation: splash-fade-out 0.6s ease-in-out 6s forwards;
+}
+
+/* Site-wide preloader (PageLoader): the whole visible lifecycle is a single
+   compositor-driven animation, so the overlay always gets out of the way ~1.45s
+   after it appears even while the main thread is busy (heavy WebGL init, slow
+   devices). Hold ~900ms, slide off-screen + fade over ~500ms, then stay
+   invisible and non-interactive until React removes the node. */
+@keyframes preloader-life {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    62% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+        visibility: hidden;
+    }
+}
+
+.preloader-life {
+    animation: preloader-life 1.45s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    will-change: opacity, transform;
+}
+
+/* CSS Service Canvas — particle drift (replaces WebGL ambient particles) */
+@keyframes particleDrift {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.15;
+    }
+    50% {
+        transform: translate(10px, -15px) scale(1.3);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(-8px, 8px) scale(0.8);
+        opacity: 0.2;
+    }
+}
+
+/* CSS Product Canvas — pulse animation (replaces WebGL 3D shapes) */
+@keyframes productPulse {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+/* CSS Orbital Rings — rotation animation (replaces WebGL torus scene) */
+@keyframes orbitalSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} /* TechOrbit — clockwise orbit rotation */
+@keyframes orbitSpinCW {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* TechOrbit — counter-rotate cards to keep text upright */
+@keyframes orbitCounterCW {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .orbitSpinCW,
+    .orbitCounterCW {
+        animation: none !important;
+    }
+}
+
+/* CSS Logo Orb — float and particle animations (replaces WebGL LogoParticleScene) */
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes particleFloat {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.6;
+    }
+    25% {
+        transform: translate(8px, -12px) scale(1.2);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-4px, -8px) scale(0.8);
+        opacity: 0.4;
+    }
+    75% {
+        transform: translate(-8px, 4px) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* CSS Fluid Aurora — background plume drift animations (replaces WebGL GLSL shader) */
+@keyframes fluidDrift1 {
+    0% {
+        transform: translate(0%, 0%) scale(1);
+    }
+    33% {
+        transform: translate(5%, -8%) scale(1.05);
+    }
+    66% {
+        transform: translate(-3%, 4%) scale(0.95);
+    }
+    100% {
+        transform: translate(8%, -3%) scale(1.02);
+    }
+}
+
+@keyframes fluidDrift2 {
+    0% {
+        transform: translate(0%, 0%) scale(1);
+    }
+    33% {
+        transform: translate(-6%, 5%) scale(1.03);
+    }
+    66% {
+        transform: translate(4%, -6%) scale(0.97);
+    }
+    100% {
+        transform: translate(-4%, 3%) scale(1.01);
+    }
+}
+
+@keyframes fluidDrift3 {
+    0% {
+        transform: translate(0%, 0%) scale(1);
+    }
+    50% {
+        transform: translate(3%, -4%) scale(1.04);
+    }
+    100% {
+        transform: translate(-5%, 2%) scale(0.98);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    button:active:not(:disabled) {
+        transform: none;
+    }
+
+    .animate-glow-breathe,
+    .text-shimmer {
+        animation: none !important;
+    }
+
+    /* Reduced motion: show the preloader statically for its full display time,
+       then disappear in one step (no slide/fade) instead of animating. */
+    .preloader-life {
+        animation-timing-function: steps(1, end);
+    }
+
+    #splash [class*='animate-'] {
+        animation: none !important;
+    }
+    #splash .splash-band {
+        transform: translateX(25%);
+    }
+
+    /* Stop fluid aurora drift on reduced motion */
+    [class*='fluidDrift'] {
+        animation: none !important;
+    }
+}
