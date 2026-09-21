@@ -57,217 +57,572 @@
             </url>
     <url>
     <loc>https://ovoll.in/services/branding</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/services/packaging-design</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/services/stationery-kits</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/services/product-design</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/services/printing-services</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/design-systems</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/motion-design</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/web-design</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/website-redesign</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/mobile-app-design</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/services/ui-ux</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/services/web-app-development</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/services/app-development</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/saas-platforms</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/ecommerce-platforms</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/internal-portals</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/web-development</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/services/website-design-development</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
-    <loc>https://ovoll.in/services/product-development</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <loc>https://ovoll.in/services/mvp-development</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/api-backends</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/cloud-devops</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/realtime-systems</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/security-hardening</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/services/ai-workflows</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/workflow-automation</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/rag-enterprise-search</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/computer-vision</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/conversational-ai</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/landing-page-design</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/services/seo</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/services/digital-marketing</loc>
-    <lastmod>2026-07-18T22:27:00+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/cro-optimization</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/speed-optimization</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/services/growth-consulting</loc>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/building-a-brand-system-that-commands-premium-pricing</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/fmcg-packaging-architecture-winning-the-shelf-in-3-seconds</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/corporate-collateral-why-stationery-still-signals-authority</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/mathematical-easing-curves-in-premium-interaction-design</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/design-tokens-syncing-figma-tailwind-v4-and-css-variables</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/inside-the-vanguard-ui-kit-80-components-that-stay-on-brand</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/print-proofing-eliminating-muddy-color-before-it-ships</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/industrial-styling-validating-ergonomics-before-tooling</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/latency-budgeting-keeping-laravel-routes-under-50ms</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/full-stack-enterprise-systems-with-laravel-13-inertia-react-19</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/gpu-instancedmesh-sanitation-for-ambient-webgl-canvases</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/inside-the-obsidian-webgl-boilerplate-vite-r3f-glsl</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/cinematic-scroll-choreography-with-gsap-scrolltrigger</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/state-synchronization-across-inertiajs-navigations</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/type-safe-api-contracts-between-laravel-and-react-19</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/cross-platform-mobile-with-react-native-feature-parity-done-right</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/ai-agents-process-automation-cutting-admin-time-by-70</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/structured-prompt-engineering-for-reliable-json-payloads</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/the-digital-product-incubator-from-scope-to-edge-deployment</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/generative-engine-optimization-ranking-in-ai-search-not-just-google</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/core-web-vitals-as-a-revenue-lever-not-a-checkbox</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/performance-campaigns-turning-ad-traffic-into-qualified-leads</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/clean-architecture-as-a-balance-sheet-asset</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/building-brand-trust-through-technical-transparency</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/motion-systems-a-reusable-animation-language-for-product-teams</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/custom-glsl-shaders-writing-your-first-fragment-backdrop</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/filament-v5-admin-panels-shipping-an-ops-dashboard-in-days</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/positioning-a-studio-selling-outcomes-not-hours</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/accessible-by-default-wcag-aa-without-sacrificing-aesthetics</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
     <loc>https://ovoll.in/insights/edge-caching-strategy-with-vercel-and-cloudflare</loc>
-    <lastmod>2026-07-20T20:13:37+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/color-theory-for-dark-interfaces-luminance-over-hue</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/type-scale-systems-choosing-a-modular-ratio-that-scales</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/grid-systems-the-invisible-structure-behind-premium-layouts</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/micro-interactions-that-signal-craftsmanship</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/designing-empty-states-that-keep-users-engaged</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/iconography-systems-consistent-strokes-consistent-trust</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/the-psychology-of-whitespace-in-luxury-brands</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/responsive-typography-with-css-clamp</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/building-a-component-library-designers-actually-use</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/logo-clear-space-and-minimum-size-rules-that-protect-the-mark</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/designing-for-print-and-screen-from-one-source-file</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/gradient-meshes-adding-depth-without-images</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/dark-mode-done-right-beyond-inverting-colors</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/designing-data-dense-dashboards-without-clutter</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/sound-design-in-interfaces-the-overlooked-layer</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/choosing-brand-fonts-that-license-cleanly</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/card-design-patterns-elevation-hierarchy-and-focus</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/queue-architecture-in-laravel-horizon-retries-and-backoff</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/database-indexing-playbook-for-read-heavy-apps</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/shrinking-your-javascript-bundle-below-200kb</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/image-optimization-from-multi-mb-to-kilobytes</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/writing-testable-laravel-controllers-with-pest</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/real-time-features-with-laravel-reverb-and-websockets</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/caching-strategies-when-to-reach-for-redis</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/securing-file-uploads-in-laravel-applications</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/building-a-type-safe-form-layer-with-react-hook-form-zod</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/optimistic-ui-updates-with-inertia-v3</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/debouncing-throttling-and-raf-in-interactive-uis</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/managing-environment-config-across-staging-and-production</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/rate-limiting-apis-without-punishing-real-users</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/background-job-idempotency-exactly-once-in-a-retry-world</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/server-side-pagination-that-stays-fast-at-scale</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/feature-flags-shipping-safely-to-a-slice-of-users</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/observability-logs-metrics-and-traces-that-matter</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/migrations-without-downtime-expand-and-contract</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/technical-seo-foundations-for-single-page-apps</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/structured-data-schemaorg-types-worth-implementing</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/landing-page-conversion-audit-a-practical-checklist</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/pricing-psychology-for-digital-products</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/retention-over-acquisition-the-cheaper-growth-lever</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/content-that-ranks-in-both-google-and-ai-answers</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/analytics-without-creepiness-privacy-first-tracking</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/the-metrics-that-actually-predict-churn</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/positioning-against-cheaper-competitors</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/email-nurture-flows-that-do-not-feel-like-spam</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/turning-case-studies-into-sales-assets</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/ab-testing-reaching-statistical-significance-honestly</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/internationalization-as-a-growth-strategy</loc>
+    <lastmod>2026-08-26T00:40:04+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/measuring-the-roi-of-a-website-redesign</loc>
+    <lastmod>2026-08-26T00:40:05+00:00</lastmod>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>https://ovoll.in/insights/building-an-authority-content-moat</loc>
+    <lastmod>2026-08-26T00:40:05+00:00</lastmod>
     <priority>0.7</priority>
             </url>
     <url>
@@ -296,167 +651,167 @@
             </url>
     <url>
     <loc>https://ovoll.in/hub/the-complete-guide-to-design-tokens</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:06+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/building-a-brand-system-that-commands-premium-pricing</loc>
-    <lastmod>2026-07-21T06:08:20+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:06+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/packaging-artwork-pre-flight-checklist</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:06+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/mathematical-easing-curves-in-premium-interaction-design</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:06+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/accessible-color-palettes-without-sacrificing-aesthetics</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:06+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/motion-system-starter-tokens-download</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:06+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/logo-clear-space-and-minimum-size-rules</loc>
-    <lastmod>2026-07-21T06:08:12+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:06+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/laravel-13-inertia-react-19-a-full-stack-blueprint</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:06+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/latency-budgeting-keeping-laravel-routes-under-50ms</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:06+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/type-safe-api-contracts-between-laravel-and-react</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:06+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/gpu-instancedmesh-sanitation-for-ambient-webgl</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/your-first-glsl-fragment-backdrop</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/state-synchronization-across-inertia-navigations</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/filament-v5-admin-panels-in-days-not-sprints</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/production-deployment-checklist-for-laravel-apps</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/cinematic-scroll-choreography-with-gsap-scrolltrigger</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/cross-platform-mobile-with-react-native</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/structured-prompt-engineering-for-reliable-json</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/ai-agents-that-cut-admin-time-by-70</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/estimating-llm-feature-cost-before-you-build</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/semantic-search-tuning-embedding-similarity-thresholds</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/prompt-library-starter-pack-download</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/generative-engine-optimization-ranking-in-ai-search</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/core-web-vitals-as-a-revenue-lever</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/landing-page-conversion-audit-checklist</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/turning-ad-traffic-into-qualified-leads</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/technical-seo-foundations-for-single-page-apps</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/clean-architecture-as-a-balance-sheet-asset</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/edge-caching-strategy-with-vercel-and-cloudflare</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/shrinking-your-javascript-bundle</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/database-indexing-playbook-for-read-heavy-apps</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/performance-budget-worksheet-download</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/hub/image-optimization-from-multi-mb-to-kilobytes</loc>
-    <lastmod>2026-07-20T21:19:35+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:07+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
@@ -481,172 +836,172 @@
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/brand-name-generator</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/color-palette-generator</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/gradient-generator</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/meta-tag-generator</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/roi-calculator</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/prompt-builder</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/type-scale-composer</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/spacing-token-builder</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/shadow-elevation-studio</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/border-radius-harmonizer</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/easing-curve-lab</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/spring-physics-playground</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/stagger-sequencer</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/glsl-fragment-sandbox</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/particle-field-composer</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/mesh-gradient-weaver</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:02+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/token-cost-estimator</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/embedding-similarity-explorer</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/json-schema-prompt-linter</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/contrast-ratio-checker</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/focus-order-visualizer</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/aria-role-inspector</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/bundle-size-analyzer</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/core-web-vitals-simulator</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/cache-header-planner</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/regex-tester</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/cron-expression-builder</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/jwt-decoder</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/uuid-ulid-generator</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/logo-grid-constructor</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/tagline-rhythm-tester</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/cursor-trail-composer</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/scroll-progress-designer</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
     <url>
     <loc>https://ovoll.in/studio/tool/haptic-feedback-mapper</loc>
-    <lastmod>2026-07-20T21:17:25+00:00</lastmod>
+    <lastmod>2026-08-26T00:40:03+00:00</lastmod>
     <priority>0.6</priority>
             </url>
 </urlset>

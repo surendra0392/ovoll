@@ -34,5 +34,4 @@ Disallow: /dev/
 
 # Sitemap Location
 Sitemap: https://ovoll.in/sitemap.xml
-Sitemap: https://ovoll.test/sitemap.xml
 

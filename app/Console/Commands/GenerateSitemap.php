@@ -34,7 +34,7 @@ class GenerateSitemap extends Command
 
         foreach ($this->staticUrls() as $path => $priority) {
             $sitemap->add(
-                Url::create(url($path))
+                Url::create($this->canonicalUrl($path))
                     ->setPriority($priority)
                     ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
             );
@@ -47,6 +47,19 @@ class GenerateSitemap extends Command
         $this->info('Sitemap generated successfully.');
 
         return self::SUCCESS;
+    }
+
+    /**
+     * Resolve the canonical base URL for the sitemap (always https://ovoll.in in sitemaps).
+     */
+    private function canonicalUrl(string $path = ''): string
+    {
+        $appUrl = config('app.url', 'https://ovoll.in');
+        $base = (empty($appUrl) || str_contains($appUrl, 'localhost') || str_contains($appUrl, '.test'))
+            ? 'https://ovoll.in'
+            : rtrim($appUrl, '/');
+
+        return $base.($path === '/' ? '' : '/'.ltrim($path, '/'));
     }
 
     /**
@@ -78,50 +91,43 @@ class GenerateSitemap extends Command
     {
         Service::query()->active()->select(['slug', 'updated_at'])->get()
             ->each(fn (Service $s) => $sitemap->add(
-                Url::create(url("/services/{$s->slug}"))
-
+                Url::create($this->canonicalUrl("/services/{$s->slug}"))
                     ->setLastModificationDate($s->updated_at)
                     ->setPriority(0.7)
             ));
 
         Article::query()->published()->select(['slug', 'updated_at'])->get()
             ->each(fn (Article $a) => $sitemap->add(
-                Url::create(url("/insights/{$a->slug}"))
-
+                Url::create($this->canonicalUrl("/insights/{$a->slug}"))
                     ->setLastModificationDate($a->updated_at)
                     ->setPriority(0.7)
             ));
 
         ArticleCategory::query()->has('articles')->select(['slug', 'updated_at'])->get()
             ->each(fn (ArticleCategory $c) => $sitemap->add(
-                Url::create(url("/insights/category/{$c->slug}"))->setPriority(0.5)
-
+                Url::create($this->canonicalUrl("/insights/category/{$c->slug}"))->setPriority(0.5)
             ));
 
         Author::query()->select(['slug', 'updated_at'])->get()
             ->each(fn (Author $a) => $sitemap->add(
-                Url::create(url("/insights/author/{$a->slug}"))->setPriority(0.4)
-
+                Url::create($this->canonicalUrl("/insights/author/{$a->slug}"))->setPriority(0.4)
             ));
 
         Resource::query()->published()->select(['slug', 'updated_at'])->get()
             ->each(fn (Resource $r) => $sitemap->add(
-                Url::create(url("/hub/{$r->slug}"))
-
+                Url::create($this->canonicalUrl("/hub/{$r->slug}"))
                     ->setLastModificationDate($r->updated_at)
                     ->setPriority(0.6)
             ));
 
         ResourceCategory::query()->active()->select(['slug', 'updated_at'])->get()
             ->each(fn (ResourceCategory $c) => $sitemap->add(
-                Url::create(url("/hub/category/{$c->slug}"))->setPriority(0.5)
-
+                Url::create($this->canonicalUrl("/hub/category/{$c->slug}"))->setPriority(0.5)
             ));
 
         Tool::query()->published()->select(['slug', 'updated_at'])->get()
             ->each(fn (Tool $t) => $sitemap->add(
-                Url::create(url("/studio/tool/{$t->slug}"))
-
+                Url::create($this->canonicalUrl("/studio/tool/{$t->slug}"))
                     ->setLastModificationDate($t->updated_at)
                     ->setPriority(0.6)
             ));
