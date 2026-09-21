@@ -34,7 +34,10 @@ if (typeof window !== 'undefined') {
 }
 
 createInertiaApp({
-    title: (title) => (title ? `${title} — ${appName}` : appName),
+    title: (title) => {
+        if (!title) return appName;
+        return title.toLowerCase().includes(appName.toLowerCase()) ? title : `${title} — ${appName}`;
+    },
     resolve: async (name) => {
         // Each page is resolved via import.meta.glob which produces
         // separate per-page chunks automatically. Heavy page-internal

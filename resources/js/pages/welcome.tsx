@@ -296,50 +296,13 @@ export default function Welcome({ page }: WelcomeProps) {
     const secondaryUrl = cms.hero?.secondaryUrl || '/services';
     const secondaryCta = cms.hero?.secondaryCta || 'Explore Our Services';
 
-    const homeSchemas = [
-        {
-            '@context': 'https://schema.org',
-            '@type': 'ProfessionalService',
-            '@id': 'https://ovoll.in/#organization',
-            name: 'OVOLL',
-            legalName: 'OVOLL Incorporated',
-            url: 'https://ovoll.in',
-            logo: 'https://ovoll.in/favicon.svg',
-            image: 'https://ovoll.in/images/og.jpg',
-            description: 'Vanguard digital studio specializing in brand identity systems, full-stack web applications, 3D WebGL experiences, and autonomous AI automation.',
-            email: 'hello@ovoll.in',
-            priceRange: '$$$$',
-            address: {
-                '@type': 'PostalAddress',
-                addressCountry: 'US',
-            },
-            hasOfferCatalog: {
-                '@type': 'OfferCatalog',
-                name: 'Core Service Ecosystems',
-                itemListElement: [
-                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Brand Experience & Visual Systems' } },
-                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Digital Products & SaaS Engineering' } },
-                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '3D WebGL & Creative Engineering' } },
-                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Autonomous AI Workflows & RAG' } },
-                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Performance Marketing & Technical SEO' } },
-                ],
-            },
-            sameAs: [
-                'https://x.com/ovoll',
-                'https://linkedin.com/company/ovoll',
-                'https://github.com/ovoll',
-            ],
-        },
-    ];
-
     return (
         <>
             <SeoHead
-                title="OVOLL — Strategic Branding & Digital Growth Studio"
-                description="Vanguard digital studio engineering brand identity systems, high-converting web applications, 3D WebGL experiences, and autonomous AI architectures."
+                title="Strategic Branding, UI/UX & Digital Product Engineering Studio"
+                description="Vanguard branding and digital product engineering studio in India serving global enterprises. We specialize in strategic brand systems, custom web apps, FMCG packaging, SaaS platforms, and AI automation."
                 canonical="https://ovoll.in"
                 type="website"
-                schema={homeSchemas}
             />
 
             <div className="bg-surface-section relative min-h-screen text-white">

@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { siteConfig } from '@/config/site';
 
 export interface AlternateLocale {
-    /** BCP 47 hreflang code, e.g. 'en-US', 'fr', 'x-default' */
+    /** BCP 47 hreflang code, e.g. 'en-US', 'en-IN', 'x-default' */
     hreflang: string;
     /** Full absolute URL for this locale version of the current page */
     href: string;
@@ -15,11 +15,14 @@ export interface SeoProps {
     canonical?: string;
     image?: string;
     type?: string;
-    schema?: string | Record<string, unknown>;
+    keywords?: string | string[];
+    schema?: string | Record<string, unknown> | Array<Record<string, unknown>>;
     /** Extra <head> nodes to render (e.g. robots directives). */
     children?: ReactNode;
     /** Set to false to skip injecting the default Organization schema */
     defaultSchema?: boolean;
+    /** Set to false to skip auto-generating BreadcrumbList schema */
+    breadcrumbs?: boolean;
     /**
      * Override the current locale code for hreflang detection.
      * Defaults to siteConfig.locales.primary.
@@ -34,8 +37,6 @@ export interface SeoProps {
 
 /**
  * Build alternate locale URLs from the canonical URL for all configured locales.
- * For the primary locale (no prefix), the URL is kept as-is.
- * For other locales, the prefix is inserted into the URL path.
  */
 function buildAlternateUrls(canonical: string): AlternateLocale[] {
     const { available, xDefault } = siteConfig.locales;
@@ -48,18 +49,15 @@ function buildAlternateUrls(canonical: string): AlternateLocale[] {
             let href: string;
 
             if (locale.prefix) {
-                // Insert prefix after the origin, e.g. https://ovoll.in/fr/path
                 const path = url.pathname === '/' ? '' : url.pathname;
                 href = `${url.origin}${locale.prefix}${path}${url.search}`;
             } else {
-                // Primary locale — no prefix, keep canonical as-is
                 href = canonical;
             }
 
             alternates.push({ hreflang: locale.hreflang, href });
         }
 
-        // Add x-default pointing to the canonical/x-default locale version
         const xDefaultEntry = available.find((l) => l.hreflang === xDefault);
 
         if (xDefaultEntry) {
@@ -75,10 +73,72 @@ function buildAlternateUrls(canonical: string): AlternateLocale[] {
     return alternates;
 }
 
+/**
+ * Build Schema.org BreadcrumbList from URL segments for search snippet breadcrumbs.
+ */
+function buildBreadcrumbSchema(canonical: string): Record<string, unknown> | null {
+    try {
+        const url = new URL(canonical);
+        const pathSegments = url.pathname.split('/').filter(Boolean);
+        if (pathSegments.length === 0) return null;
+
+        const itemListElement = [
+            {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: siteConfig.url,
+            },
+        ];
+
+        let accumulatedPath = '';
+        pathSegments.forEach((segment, index) => {
+            accumulatedPath += `/${segment}`;
+            const formattedName = segment
+                .split('-')
+                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+
+            itemListElement.push({
+                '@type': 'ListItem',
+                position: index + 2,
+                name: formattedName,
+                item: `${siteConfig.url}${accumulatedPath}`,
+            });
+        });
+
+        return {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement,
+        };
+    } catch {
+        return null;
+    }
+}
+
+/**
+ * Rich Organization & ProfessionalService schema covering India & Global markets.
+ */
 function buildOrganizationSchema(): Record<string, unknown> {
+    const indianCities = siteConfig.markets?.indianCities || ['Bengaluru', 'Mumbai', 'Delhi NCR', 'Hyderabad', 'Pune'];
+    const globalRegions = siteConfig.markets?.globalRegions || ['United States', 'United Kingdom', 'United Arab Emirates', 'Worldwide'];
+
+    const areaServed = [
+        ...indianCities.map((city) => ({
+            '@type': 'City',
+            name: city,
+            containedInPlace: { '@type': 'Country', name: 'India' },
+        })),
+        ...globalRegions.map((region) => ({
+            '@type': 'Country',
+            name: region,
+        })),
+    ];
+
     return {
         '@context': 'https://schema.org',
-        '@type': 'Organization',
+        '@type': ['Organization', 'ProfessionalService'],
         '@id': `${siteConfig.url}/#organization`,
         name: siteConfig.company.legalName || siteConfig.name,
         url: siteConfig.url,
@@ -88,12 +148,28 @@ function buildOrganizationSchema(): Record<string, unknown> {
         email: siteConfig.company.email,
         telephone: siteConfig.company.telephone,
         foundingDate: siteConfig.company.foundingDate,
+        priceRange: siteConfig.company.priceRange || '$$$$',
+        currenciesAccepted: siteConfig.company.currenciesAccepted || 'INR, USD, EUR, GBP, AED',
         address: {
             '@type': 'PostalAddress',
             streetAddress: siteConfig.company.address,
-            addressLocality: 'New York',
-            addressRegion: 'NY',
-            addressCountry: 'US',
+            addressLocality: siteConfig.company.addressLocality || 'Bengaluru',
+            addressRegion: siteConfig.company.addressRegion || 'Karnataka',
+            postalCode: siteConfig.company.postalCode || '560001',
+            addressCountry: siteConfig.company.addressCountry || 'IN',
+        },
+        areaServed,
+        knowsAbout: siteConfig.keywords,
+        hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: 'Core Capabilities & Service Ecosystems',
+            itemListElement: [
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Brand Experience & Strategy' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Digital Products & SaaS Engineering' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Engineering & Full-Stack Tech' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI & Autonomous Automation' } },
+                { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Performance Marketing & Technical SEO' } },
+            ],
         },
         sameAs: siteConfig.social.sameAs,
     };
@@ -120,31 +196,62 @@ export function SeoHead({
     canonical,
     image,
     type,
+    keywords,
     schema,
     defaultSchema = true,
+    breadcrumbs = true,
     alternateLocales,
     children,
 }: SeoProps) {
-    const { seo } = usePage().props;
+    const { seo } = usePage().props as {
+        seo?: {
+            title?: string;
+            description?: string;
+            image?: string;
+            canonical?: string;
+            keywords?: string | string[];
+            schema?: string | Record<string, unknown>;
+            type?: string;
+        };
+    };
 
     const finalTitle = title || seo?.title;
-    const fullTitle = finalTitle ? `${finalTitle} | ${siteConfig.name}` : siteConfig.name;
+    // Prevent duplicated "| OVOLL" if already contained in finalTitle
+    const fullTitle = finalTitle
+        ? finalTitle.toLowerCase().includes(siteConfig.name.toLowerCase())
+            ? finalTitle
+            : `${finalTitle} | ${siteConfig.name}`
+        : siteConfig.title || siteConfig.name;
+
     const finalDescription = description || seo?.description || siteConfig.description;
     const finalImage = image || seo?.image || siteConfig.ogImage;
     const finalCanonical = canonical || seo?.canonical || siteConfig.url;
     const finalType = type || seo?.type || 'website';
 
+    // Keywords resolution
+    const resolvedKeywords = keywords || seo?.keywords || siteConfig.keywords;
+    const keywordsString = Array.isArray(resolvedKeywords)
+        ? resolvedKeywords.join(', ')
+        : resolvedKeywords;
+
     // Build hreflang alternate URLs
     const altLocales =
         alternateLocales ?? (finalCanonical ? buildAlternateUrls(finalCanonical) : []);
 
-    // Merge custom schema with default Organization + Website schemas
+    // Merge custom schema with default Organization + Website + Breadcrumb schemas
     const customSchema = schema || seo?.schema;
     const schemas: Record<string, unknown>[] = [];
 
     if (defaultSchema) {
         schemas.push(buildOrganizationSchema());
         schemas.push(buildWebsiteSchema());
+    }
+
+    if (breadcrumbs && finalCanonical && finalCanonical !== siteConfig.url) {
+        const breadcrumbSchema = buildBreadcrumbSchema(finalCanonical);
+        if (breadcrumbSchema) {
+            schemas.push(breadcrumbSchema);
+        }
     }
 
     if (customSchema) {
@@ -168,6 +275,15 @@ export function SeoHead({
         <Head>
             <title>{fullTitle}</title>
             <meta name="description" content={finalDescription} />
+            {keywordsString && <meta name="keywords" content={keywordsString} />}
+            <meta
+                name="robots"
+                content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+            />
+            {/* Regional Geo Signals */}
+            <meta name="geo.region" content="IN" />
+            <meta name="geo.placename" content="India" />
+
             {children}
             <meta property="og:locale" content={siteConfig.locale} />
             <meta property="og:site_name" content={siteConfig.name} />
@@ -196,7 +312,7 @@ export function SeoHead({
                 <link key={alt.hreflang} rel="alternate" hrefLang={alt.hreflang} href={alt.href} />
             ))}
 
-            {/* JSON-LD Schema — Organization + Website + custom */}
+            {/* JSON-LD Schema */}
             {schemaString && <script type="application/ld+json">{schemaString}</script>}
         </Head>
     );

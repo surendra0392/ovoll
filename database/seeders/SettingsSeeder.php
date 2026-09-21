@@ -58,9 +58,9 @@ class SettingsSeeder extends Seeder
                 ],
                 'contact_info' => [
                     'email' => 'hello@ovoll.in',
-                    'telephone' => '+1-555-0123',
-                    'phone' => '+1-555-0123',
-                    'address' => '123 Innovation Drive, Tech City, TC 90210',
+                    'telephone' => '+91 90000 00000',
+                    'phone' => '+91 90000 00000',
+                    'address' => 'Bengaluru, Karnataka, India',
                 ],
                 'social_links' => [
                     'twitter' => 'https://x.com/ovoll',
@@ -70,9 +70,9 @@ class SettingsSeeder extends Seeder
                 ],
                 'analytics_ids' => [],
                 'meta_defaults' => [
-                    'title' => 'OVOLL — Strategic Branding & Digital Growth Studio',
-                    'description' => 'OVOLL is a vanguard digital growth studio specializing in branding, product design, SaaS platforms, and AI solutions for ambitious companies that demand excellence.',
-                    'keywords' => 'digital studio, branding, product design, SaaS development, AI solutions, web development, UI UX design',
+                    'title' => 'OVOLL — Strategic Branding, UI/UX & Digital Product Engineering Studio',
+                    'description' => 'Vanguard branding and digital product engineering studio in India serving global enterprises. We specialize in strategic brand systems, custom web apps, FMCG packaging, SaaS platforms, and AI automation.',
+                    'keywords' => 'branding agency in India, strategic branding studio Bangalore, UI UX design agency Mumbai, custom web application development company India, enterprise SaaS development agency Delhi NCR, fintech product design studio Hyderabad, FMCG packaging design agency Pune, digital product engineering company India, AI automation company India, luxury brand design agency India, design systems, React Laravel full stack agency',
                     'og_image' => 'https://ovoll.in/images/logo.png',
                 ],
                 'brand_colors' => [
