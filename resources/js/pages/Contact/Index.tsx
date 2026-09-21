@@ -108,32 +108,16 @@ export default function Contact({ settings }: ContactProps) {
                 name: 'OVOLL',
                 url: 'https://ovoll.in',
                 email: 'hello@ovoll.in',
-                telephone: '+1-555-0123',
+                telephone: '+91 90000 00000',
                 contactPoint: {
                     '@type': 'ContactPoint',
-                    contactType: 'customer service',
+                    contactType: 'sales & partnership inquiries',
                     email: 'hello@ovoll.in',
+                    telephone: '+91 90000 00000',
+                    areaServed: ['India', 'United States', 'United Kingdom', 'United Arab Emirates', 'Worldwide'],
                     availableLanguage: ['English'],
                 },
             },
-        },
-        {
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-                {
-                    '@type': 'ListItem',
-                    position: 1,
-                    name: 'Home',
-                    item: 'https://ovoll.in',
-                },
-                {
-                    '@type': 'ListItem',
-                    position: 2,
-                    name: 'Contact',
-                    item: 'https://ovoll.in/contact',
-                },
-            ],
         },
     ];
 
@@ -144,6 +128,14 @@ export default function Contact({ settings }: ContactProps) {
                 description={settings?.seo_meta?.description || 'Get in touch with OVOLL to discuss brand identity systems, custom web applications, 3D WebGL experiences, or autonomous AI automation projects.'}
                 canonical="https://ovoll.in/contact"
                 type="website"
+                keywords={[
+                    'hire branding agency India',
+                    'contact digital product studio',
+                    'web development inquiry Bangalore',
+                    'UI UX design consultation India',
+                    'enterprise software scoping',
+                    'partnership inquiry OVOLL',
+                ]}
                 schema={contactSchemas}
             />
             <CustomCursor />

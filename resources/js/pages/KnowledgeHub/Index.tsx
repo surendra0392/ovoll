@@ -80,9 +80,38 @@ export default function KnowledgeHubIndex({ resources, categories, filters }: In
         return <Icon className="h-4 w-4" />;
     };
 
+    const hubCollectionSchema: Record<string, unknown> = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'OVOLL Knowledge Hub',
+        description:
+            'Engineering blueprints, architectural playbooks, and digital product transformation guides.',
+        url: 'https://ovoll.in/hub',
+        isPartOf: {
+            '@type': 'WebSite',
+            name: 'OVOLL',
+            url: 'https://ovoll.in',
+        },
+    };
+
     return (
         <PageTransitionWrapper>
-            <SeoHead title="Knowledge Hub | OVOLL" />
+            <SeoHead
+                title="Knowledge Hub — Engineering Blueprints, Playbooks & Guides"
+                description="Access OVOLL's open technical knowledge base of system design playbooks, full-stack benchmarks, SaaS engineering blueprints, and digital transformation guides for tech leaders in India and globally."
+                canonical="https://ovoll.in/hub"
+                keywords={[
+                    'enterprise architecture guide',
+                    'engineering blueprints India',
+                    'software design playbook',
+                    'tech whitepapers',
+                    'SaaS scalability guide',
+                    'system design resources',
+                    'CTO playbook',
+                    'OVOLL knowledge hub',
+                ]}
+                schema={hubCollectionSchema}
+            />
 
             <main className="bg-surface-raised relative min-h-screen overflow-hidden pt-32 pb-24 text-white selection:bg-[#00D1FF]/30 selection:text-white">
                 {/* Background radial gradient in brand Teal/Cyan */}

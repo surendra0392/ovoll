@@ -165,10 +165,23 @@ export default function KnowledgeHubShow({ resource, relatedResources }: ShowPro
     return (
         <PageTransitionWrapper>
             <SeoHead
-                title={`${resource.title} | OVOLL Knowledge Hub`}
-                description={resource.excerpt}
+                title={`${resource.title} — Blueprint & Technical Guide`}
+                description={
+                    resource.excerpt ||
+                    `Technical guide and implementation blueprint on ${resource.title} by OVOLL.`
+                }
                 canonical={`https://ovoll.in/hub/${resource.slug}`}
                 type="article"
+                image={resource.cover_image ? `/storage/${resource.cover_image}` : undefined}
+                keywords={[
+                    resource.title,
+                    resource.category?.name || 'Architecture',
+                    resource.type,
+                    'engineering blueprint',
+                    'technical playbook India',
+                    'software architecture resource',
+                    'OVOLL Knowledge Hub',
+                ]}
                 schema={hubSchemas}
             />
 

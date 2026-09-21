@@ -126,6 +126,7 @@ export default function Privacy({ page }: { page?: LegalPageProps }) {
                       : undefined
             }
             contactEmail={siteSettings?.contact_info?.email || siteConfig.company.email}
+            canonical="https://ovoll.in/privacy"
         />
     );
 }

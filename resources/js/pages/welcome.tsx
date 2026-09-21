@@ -303,6 +303,18 @@ export default function Welcome({ page }: WelcomeProps) {
                 description="Vanguard branding and digital product engineering studio in India serving global enterprises. We specialize in strategic brand systems, custom web apps, FMCG packaging, SaaS platforms, and AI automation."
                 canonical="https://ovoll.in"
                 type="website"
+                keywords={[
+                    'branding agency India',
+                    'UI UX design studio Bangalore',
+                    'custom web application development',
+                    'enterprise SaaS engineering India',
+                    'AI automation solutions Bangalore',
+                    'digital product agency Mumbai',
+                    'FMCG packaging design agency India',
+                    'React Laravel development company',
+                    'design and engineering studio',
+                    'OVOLL',
+                ]}
             />
 
             <div className="bg-surface-section relative min-h-screen text-white">

@@ -36,9 +36,40 @@ interface Props {
 }
 
 export default function InsightsCategory({ category, articles }: Props) {
+    const categorySchema: Record<string, unknown> = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: `${category.name} Insights — OVOLL`,
+        description:
+            category.description ||
+            `Explore technical insights, architectural case studies, and engineering strategies on ${category.name} by OVOLL.`,
+        url: `https://ovoll.in/insights/category/${category.slug}`,
+        isPartOf: {
+            '@type': 'WebSite',
+            name: 'OVOLL',
+            url: 'https://ovoll.in',
+        },
+    };
+
     return (
         <div className="bg-background relative min-h-screen overflow-hidden">
-            <SeoHead title={`${category.name} Insights | OVOLL`} />
+            <SeoHead
+                title={`${category.name} Insights & Perspectives`}
+                description={
+                    category.description ||
+                    `Explore technical insights, architectural case studies, and engineering strategies on ${category.name} by OVOLL.`
+                }
+                canonical={`https://ovoll.in/insights/category/${category.slug}`}
+                keywords={[
+                    category.name,
+                    `${category.name} insights`,
+                    `${category.name} architecture`,
+                    'software engineering insights India',
+                    'digital agency thought leadership',
+                    'OVOLL perspectives',
+                ]}
+                schema={categorySchema}
+            />
 
             <div className="h-24"></div>
 

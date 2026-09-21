@@ -302,28 +302,20 @@ export default function Index({ featured, articles, pagination, page = null }: I
 
     return (
         <>
-            <SeoHead title="Editorial Journal — OVOLL Insights">
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'BreadcrumbList',
-                        itemListElement: [
-                            {
-                                '@type': 'ListItem',
-                                position: 1,
-                                name: 'Home',
-                                item: 'https://ovoll.in',
-                            },
-                            {
-                                '@type': 'ListItem',
-                                position: 2,
-                                name: 'Insights',
-                                item: 'https://ovoll.in/insights',
-                            },
-                        ],
-                    })}
-                </script>
-            </SeoHead>
+            <SeoHead
+                title="Editorial Journal & Industry Intel — OVOLL Insights"
+                description="Explore deep-dive technical insights, design token architectures, brand strategy playbooks, and SaaS engineering case studies from the OVOLL studio."
+                canonical="https://ovoll.in/insights"
+                type="website"
+                keywords={[
+                    'branding case studies',
+                    'design systems blog',
+                    'SaaS engineering insights',
+                    'digital product architecture',
+                    'UI UX design trends India',
+                    'technical SEO playbook',
+                ]}
+            />
             <CustomCursor />
 
             <PageBreadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Insights' }]} />

@@ -79,9 +79,39 @@ export default function Index({ categories = [], allTools = [], page = null }: I
         setCurrentPage(1);
     };
 
+    const studioSchema: Record<string, unknown> = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'OVOLL Studio — Digital Laboratory',
+        description:
+            'Interactive developer utilities, design token generators, shader labs, and engineering prototypes.',
+        url: 'https://ovoll.in/studio',
+        isPartOf: {
+            '@type': 'WebSite',
+            name: 'OVOLL',
+            url: 'https://ovoll.in',
+        },
+    };
+
     return (
         <>
-            <SeoHead title="Digital Laboratory — OVOLL Studio" />
+            <SeoHead
+                title="Developer Tools & Digital Laboratory — OVOLL Studio"
+                description="Discover 30+ interactive developer utilities, WebGL shaders, CSS generators, and AI experiments crafted by OVOLL Studio for engineers and designers."
+                canonical="https://ovoll.in/studio"
+                keywords={[
+                    'developer tools',
+                    'interactive web lab',
+                    'design token generator',
+                    'CSS gradient lab',
+                    'contrast ratio checker',
+                    'free developer utilities India',
+                    'OVOLL Studio',
+                    'front-end tools',
+                    'software engineering laboratory',
+                ]}
+                schema={studioSchema}
+            />
             <CustomCursor />
 
             <PageBreadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Studio' }]} />

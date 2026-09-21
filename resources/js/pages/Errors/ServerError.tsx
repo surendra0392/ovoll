@@ -44,10 +44,8 @@ export default function ServerError() {
                 canonical={siteConfig.url}
                 schema={errorSchema as unknown as Record<string, unknown>}
                 defaultSchema={false}
+                noIndex={true}
             />
-            <SeoHead>
-                <meta name="robots" content="noindex, nofollow" />
-            </SeoHead>
 
             <div className="relative flex min-h-[80vh] flex-col items-center justify-center px-6 text-center">
                 {/* Ambient glow */}

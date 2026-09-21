@@ -438,10 +438,21 @@ export default function Hub({ categories = [], page = null }: HubProps) {
     return (
         <>
             <SeoHead
-                title="Services & Solution Ecosystems — OVOLL"
-                description="Explore OVOLL's 5 core digital ecosystems: Brand Experience, Digital Products, Engineering & Tech, AI Automation, and Performance Growth."
+                title="Strategic Digital Services & Solution Ecosystems — OVOLL"
+                description="Explore OVOLL's 34 specialized services across Brand Identity, UI/UX Design, Custom Web & SaaS Development, FMCG Packaging, and AI Automation in India and globally."
                 canonical="https://ovoll.in/services"
                 type="website"
+                keywords={[
+                    'branding agency in India',
+                    'UI UX design company Bangalore',
+                    'custom software development agency Mumbai',
+                    'enterprise SaaS development Delhi NCR',
+                    'fintech product design studio Hyderabad',
+                    'FMCG packaging design agency Pune',
+                    'digital growth studio India',
+                    'custom web app development',
+                    'design systems and token architecture',
+                ]}
                 schema={hubSchemas}
             />
             <CustomCursor />

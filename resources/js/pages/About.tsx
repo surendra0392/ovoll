@@ -299,10 +299,18 @@ export default function About({ page }: AboutProps) {
     return (
         <>
             <SeoHead
-                title="About OVOLL — Digital Product Studio & Engineering Partner"
-                description="Learn about OVOLL's mission, architectural philosophy, multidisciplinary engineering team, and our commitment to building high-conversion digital experiences."
+                title="About OVOLL — Strategic Branding & Digital Product Studio"
+                description="Learn about OVOLL's mission, engineering philosophy, and multidisciplinary design studio in India building high-converting brand flagships and enterprise software for ambitious companies worldwide."
                 canonical="https://ovoll.in/about"
                 type="website"
+                keywords={[
+                    'about OVOLL',
+                    'digital product studio India',
+                    'strategic branding studio Bangalore',
+                    'engineering partner India',
+                    'full-stack design agency Mumbai',
+                    'SaaS design studio team',
+                ]}
                 schema={aboutSchemas}
             />
 

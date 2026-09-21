@@ -379,10 +379,20 @@ export default function Show({ service }: ShowProps) {
                 description={metaDescription}
                 canonical={canonicalUrl}
                 type="service"
+                keywords={
+                    service.seo?.keywords
+                        ? service.seo.keywords
+                        : [
+                              service.name,
+                              `${service.name} agency India`,
+                              `${service.name} services Bangalore`,
+                              `${service.name} consulting`,
+                              'enterprise software engineering',
+                              'OVOLL services',
+                          ]
+                }
                 schema={serviceSchemas}
-            >
-                {service.seo?.keywords && <meta name="keywords" content={service.seo.keywords} />}
-            </SeoHead>
+            />
 
             <PageBreadcrumbs
                 items={[

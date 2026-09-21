@@ -50,7 +50,18 @@ export default function InsightsSearch({ articles, categories, filters }: Props)
 
     return (
         <div className="bg-background relative min-h-screen overflow-hidden">
-            <SeoHead title="Search Insights | OVOLL" />
+            <SeoHead
+                title={filters.q ? `Search: "${filters.q}" | Insights` : 'Search Insights & Publications'}
+                description="Search through OVOLL's comprehensive library of software engineering, brand identity, digital product design, and AI automation insights."
+                canonical="https://ovoll.in/insights/search"
+                noIndex={Boolean(isFiltering)}
+                keywords={[
+                    'search tech insights',
+                    'software engineering articles',
+                    'design case studies search',
+                    'OVOLL library',
+                ]}
+            />
 
             <div className="h-24"></div>
 

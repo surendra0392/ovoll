@@ -207,91 +207,88 @@ export default function ArticleShow({ article }: Props) {
         day: 'numeric',
     });
 
-    // FAQs Schema injection mock
+    // FAQs Schema injection for GEO and rich snippets
     const faqQuestions = [
         {
-            q: `What is the focus of this article?`,
+            q: `What is the core focus of "${article.title}"?`,
             a: article.excerpt,
+        },
+        {
+            q: `Who authored this publication?`,
+            a: `${article.author.name}, ${article.author.role || 'Design Engineer'} at OVOLL.`,
         },
     ];
 
+    const articleSchema: Record<string, unknown> = {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: article.title,
+        description: article.excerpt,
+        image: article.cover_image
+            ? article.cover_image.startsWith('http')
+                ? article.cover_image
+                : `https://ovoll.in/storage/${article.cover_image}`
+            : 'https://ovoll.in/favicon.svg',
+        datePublished: article.published_at,
+        dateModified: article.published_at,
+        author: {
+            '@type': 'Person',
+            name: article.author.name,
+            jobTitle: article.author.role || 'Partner & Lead Engineer',
+            description: article.author.bio || '',
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: 'OVOLL',
+            logo: {
+                '@type': 'ImageObject',
+                url: 'https://ovoll.in/favicon.svg',
+            },
+        },
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `https://ovoll.in/insights/${article.slug}`,
+        },
+    };
+
+    const faqSchema: Record<string, unknown> = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqQuestions.map((faq) => ({
+            '@type': 'Question',
+            name: faq.q,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.a,
+            },
+        })),
+    };
+
     return (
         <div className="relative min-h-screen bg-transparent font-sans text-white">
-            <SeoHead>
-                <title>{`${article.title} | OVOLL Editorial Journal`}</title>
-                <meta name="description" content={article.excerpt} />
-
-                {/* JSON-LD Schemas */}
-                {/* 1. Article Schema */}
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'NewsArticle',
-                        headline: article.title,
-                        description: article.excerpt,
-                        datePublished: article.published_at,
-                        dateModified: article.published_at,
-                        author: {
-                            '@type': 'Person',
-                            name: article.author.name,
-                            jobTitle: article.author.role || 'Partner',
-                            description: article.author.bio || '',
-                        },
-                        publisher: {
-                            '@type': 'Organization',
-                            name: 'OVOLL',
-                            logo: {
-                                '@type': 'ImageObject',
-                                url: 'https://ovoll.in/favicon.svg',
-                            },
-                        },
-                    })}
-                </script>
-
-                {/* 2. Breadcrumbs Schema */}
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'BreadcrumbList',
-                        itemListElement: [
-                            {
-                                '@type': 'ListItem',
-                                position: 1,
-                                name: 'Home',
-                                item: 'https://ovoll.in',
-                            },
-                            {
-                                '@type': 'ListItem',
-                                position: 2,
-                                name: 'Insights',
-                                item: 'https://ovoll.in/insights',
-                            },
-                            {
-                                '@type': 'ListItem',
-                                position: 3,
-                                name: article.title,
-                                item: `https://ovoll.in/insights/${article.slug}`,
-                            },
-                        ],
-                    })}
-                </script>
-
-                {/* 3. FAQ Schema */}
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'FAQPage',
-                        mainEntity: faqQuestions.map((faq) => ({
-                            '@type': 'Question',
-                            name: faq.q,
-                            acceptedAnswer: {
-                                '@type': 'Answer',
-                                text: faq.a,
-                            },
-                        })),
-                    })}
-                </script>
-            </SeoHead>
+            <SeoHead
+                title={article.title}
+                description={article.excerpt}
+                canonical={`https://ovoll.in/insights/${article.slug}`}
+                type="article"
+                image={
+                    article.cover_image
+                        ? article.cover_image.startsWith('http')
+                            ? article.cover_image
+                            : `/storage/${article.cover_image}`
+                        : undefined
+                }
+                keywords={[
+                    article.title,
+                    article.category?.name || 'Technology',
+                    ...article.tags.map((t) => t.name),
+                    'software architecture insights',
+                    'engineering journal India',
+                    'system design case study',
+                    'OVOLL editorial',
+                ]}
+                schema={[articleSchema, faqSchema]}
+            />
 
             {/* Reading Progress Indicator */}
             <motion.div

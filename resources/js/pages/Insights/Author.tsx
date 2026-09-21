@@ -44,9 +44,44 @@ interface Props {
 }
 
 export default function InsightsAuthor({ author, articles }: Props) {
+    const personSchema: Record<string, unknown> = {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: author.name,
+        jobTitle: author.role || 'Design Engineer & Partner',
+        description: author.bio || undefined,
+        image: author.avatar ? `https://ovoll.in/storage/${author.avatar}` : undefined,
+        url: `https://ovoll.in/insights/author/${author.slug}`,
+        worksFor: {
+            '@type': 'Organization',
+            name: 'OVOLL',
+            url: 'https://ovoll.in',
+        },
+        sameAs: author.social_links
+            ? Object.values(author.social_links).filter(Boolean)
+            : undefined,
+    };
+
     return (
         <div className="bg-background relative min-h-screen overflow-hidden">
-            <SeoHead title={`${author.name} | OVOLL Authors`} />
+            <SeoHead
+                title={`${author.name} — Author & Design Engineer`}
+                description={
+                    author.bio ||
+                    `Explore technical publications, systems design research, and engineering articles by ${author.name} at OVOLL.`
+                }
+                canonical={`https://ovoll.in/insights/author/${author.slug}`}
+                image={author.avatar ? `/storage/${author.avatar}` : undefined}
+                keywords={[
+                    author.name,
+                    `${author.name} OVOLL`,
+                    author.role || 'Design Engineer',
+                    ...(author.expertise || []),
+                    'thought leadership India',
+                    'software engineering author',
+                ]}
+                schema={personSchema}
+            />
 
             <div className="h-24"></div>
 

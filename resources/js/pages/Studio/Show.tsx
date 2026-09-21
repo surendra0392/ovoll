@@ -95,7 +95,7 @@ export default function StudioShow({ tool, relatedTools }: ShowProps) {
             offers: {
                 '@type': 'Offer',
                 price: '0',
-                priceCurrency: 'USD',
+                priceCurrency: 'INR',
             },
             provider: {
                 '@type': 'Organization',
@@ -132,10 +132,18 @@ export default function StudioShow({ tool, relatedTools }: ShowProps) {
     return (
         <>
             <SeoHead
-                title={`${tool.name} | OVOLL Studio`}
+                title={`${tool.name} — Interactive Developer Tool`}
                 description={tool.description}
                 canonical={`https://ovoll.in/studio/tool/${tool.slug}`}
                 type="website"
+                keywords={[
+                    tool.name,
+                    `${tool.name} online`,
+                    tool.category?.name || 'Developer Utility',
+                    'free developer tool India',
+                    'interactive engineering utility',
+                    'OVOLL Studio tool',
+                ]}
                 schema={toolSchemas}
             />
 

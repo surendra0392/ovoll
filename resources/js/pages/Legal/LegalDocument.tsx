@@ -27,6 +27,7 @@ interface LegalDocumentProps {
     htmlContent?: string;
     /** Closing contact line, e.g. an email for questions. */
     contactEmail: string;
+    canonical?: string;
 }
 
 /**
@@ -43,10 +44,22 @@ export default function LegalDocument({
     sections,
     htmlContent,
     contactEmail,
+    canonical,
 }: LegalDocumentProps) {
     return (
         <>
-            <SeoHead title={`${title} — OVOLL`} />
+            <SeoHead
+                title={`${title} — Legal & Governance`}
+                description={intro}
+                canonical={canonical}
+                keywords={[
+                    title,
+                    `${title} OVOLL`,
+                    'privacy policy digital agency India',
+                    'terms of service software company',
+                    'OVOLL governance',
+                ]}
+            />
             <CustomCursor />
 
             <PageBreadcrumbs items={[{ label: 'Home', href: '/' }, { label: title }]} />

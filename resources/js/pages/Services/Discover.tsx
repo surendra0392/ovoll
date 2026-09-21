@@ -268,7 +268,20 @@ export default function Discover({ page = null }: DiscoverProps) {
 
     return (
         <>
-            <SeoHead title="Discovery & Project Estimator — OVOLL" />
+            <SeoHead
+                title="Interactive Discovery & Project Estimator — OVOLL"
+                description="Scope your digital project, calculate expected ROI uplift, and receive transparent timeline and investment estimates with OVOLL's interactive discovery suite."
+                canonical="https://ovoll.in/discover"
+                type="website"
+                keywords={[
+                    'project cost estimator',
+                    'digital agency cost calculator',
+                    'branding project discovery',
+                    'SaaS development cost estimator',
+                    'web app ROI calculator',
+                    'software development pricing India',
+                ]}
+            />
             <CustomCursor />
 
             <PageBreadcrumbs

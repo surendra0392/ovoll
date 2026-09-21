@@ -21,7 +21,11 @@ interface SuccessProps {
 export default function Success({ recommendedArticles = [] }: SuccessProps) {
     return (
         <>
-            <SeoHead title="Partnership Initiated — OVOLL" />
+            <SeoHead
+                title="Inquiry Received — Next Steps"
+                canonical="https://ovoll.in/contact/success"
+                noIndex={true}
+            />
 
             <div className="relative z-10 min-h-screen overflow-hidden bg-transparent font-sans text-white">
                 <div className="h-32" />

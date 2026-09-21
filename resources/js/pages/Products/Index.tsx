@@ -230,58 +230,51 @@ export default function Index() {
 
     const totalProductTypes = productGroups.reduce((sum, group) => sum + group.items.length, 0);
 
+    const productSchemas = [
+        {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'OVOLL Product Suites & Digital Architectures',
+            description:
+                'Explore OVOLL\'s 57+ custom-engineered product types across 11 core suites: SaaS Platforms, Native Mobile Apps, AI Workflows, Marketplaces, and Enterprise Portals.',
+            numberOfItems: totalProductTypes,
+            itemListElement: productGroups.flatMap((group, groupIdx) =>
+                group.items.map((item, itemIdx) => ({
+                    '@type': 'ListItem',
+                    position: groupIdx * 10 + itemIdx + 1,
+                    item: {
+                        '@type': 'SoftwareApplication',
+                        name: item.name,
+                        description: item.description,
+                        applicationCategory: group.category,
+                        provider: {
+                            '@type': 'Organization',
+                            name: 'OVOLL',
+                        },
+                    },
+                })),
+            ),
+        },
+    ];
+
     return (
         <>
-            <SeoHead title="Products We Build — OVOLL">
-                {/* Product Schema */}
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'ItemList',
-                        name: 'OVOLL Products',
-                        description:
-                            'Custom digital products we design and engineer — from enterprise systems to on-demand marketplaces.',
-                        numberOfItems: totalProductTypes,
-                        itemListElement: productGroups.flatMap((group, groupIdx) =>
-                            group.items.map((item, itemIdx) => ({
-                                '@type': 'ListItem',
-                                position: groupIdx * 10 + itemIdx + 1,
-                                item: {
-                                    '@type': 'SoftwareApplication',
-                                    name: item.name,
-                                    description: item.description,
-                                    applicationCategory: group.category,
-                                    provider: {
-                                        '@type': 'Organization',
-                                        name: 'OVOLL',
-                                    },
-                                },
-                            })),
-                        ),
-                    })}
-                </script>
-                {/* BreadcrumbList Schema */}
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'BreadcrumbList',
-                        itemListElement: [
-                            {
-                                '@type': 'ListItem',
-                                position: 1,
-                                name: 'Home',
-                                item: 'https://ovoll.in',
-                            },
-                            {
-                                '@type': 'ListItem',
-                                position: 2,
-                                name: 'Products',
-                                item: 'https://ovoll.in/products',
-                            },
-                        ],
-                    })}
-                </script>
-            </SeoHead>
+            <SeoHead
+                title="57+ Custom Digital Products & Software Solutions — OVOLL"
+                description="Explore OVOLL's 57+ custom-engineered product types across 11 core suites: SaaS platforms, mobile applications, AI engines, and enterprise portals in India and globally."
+                canonical="https://ovoll.in/products"
+                type="website"
+                keywords={[
+                    'custom SaaS product development',
+                    'enterprise web application solutions',
+                    'AI engine platform development',
+                    'mobile app engineering India',
+                    'B2B software development studio Bangalore',
+                    'custom fintech platforms',
+                    'marketplace software engineering',
+                ]}
+                schema={productSchemas}
+            />
             <CustomCursor />
 
             <PageBreadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Products' }]} />

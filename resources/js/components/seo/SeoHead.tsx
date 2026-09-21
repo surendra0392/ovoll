@@ -23,6 +23,8 @@ export interface SeoProps {
     defaultSchema?: boolean;
     /** Set to false to skip auto-generating BreadcrumbList schema */
     breadcrumbs?: boolean;
+    /** Set to true to emit 'noindex, nofollow' (e.g. 404, filtered searches, dev/success pages) */
+    noIndex?: boolean;
     /**
      * Override the current locale code for hreflang detection.
      * Defaults to siteConfig.locales.primary.
@@ -200,6 +202,7 @@ export function SeoHead({
     schema,
     defaultSchema = true,
     breadcrumbs = true,
+    noIndex = false,
     alternateLocales,
     children,
 }: SeoProps) {
@@ -278,7 +281,11 @@ export function SeoHead({
             {keywordsString && <meta name="keywords" content={keywordsString} />}
             <meta
                 name="robots"
-                content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+                content={
+                    noIndex
+                        ? 'noindex, nofollow'
+                        : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+                }
             />
             {/* Regional Geo Signals */}
             <meta name="geo.region" content="IN" />

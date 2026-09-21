@@ -116,6 +116,7 @@ export default function Terms({ page }: { page?: LegalPageProps }) {
                       : undefined
             }
             contactEmail={siteSettings?.contact_info?.email || siteConfig.company.email}
+            canonical="https://ovoll.in/terms"
         />
     );
 }
