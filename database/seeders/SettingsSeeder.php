@@ -58,9 +58,9 @@ class SettingsSeeder extends Seeder
                 ],
                 'contact_info' => [
                     'email' => 'hello@ovoll.in',
-                    'telephone' => '+91 90000 00000',
-                    'phone' => '+91 90000 00000',
-                    'address' => 'Bengaluru, Karnataka, India',
+                    'telephone' => '+91 86760 61234',
+                    'phone' => '+91 86760 61234',
+                    'address' => 'Hyderabad, Telangana, India.',
                 ],
                 'social_links' => [
                     'twitter' => 'https://x.com/ovoll',

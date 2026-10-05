@@ -155,9 +155,9 @@ function buildOrganizationSchema(): Record<string, unknown> {
         address: {
             '@type': 'PostalAddress',
             streetAddress: siteConfig.company.address,
-            addressLocality: siteConfig.company.addressLocality || 'Bengaluru',
-            addressRegion: siteConfig.company.addressRegion || 'Karnataka',
-            postalCode: siteConfig.company.postalCode || '560001',
+            addressLocality: siteConfig.company.addressLocality || 'Hyderabad',
+            addressRegion: siteConfig.company.addressRegion || 'Telangana',
+            postalCode: siteConfig.company.postalCode || '500081',
             addressCountry: siteConfig.company.addressCountry || 'IN',
         },
         areaServed,
